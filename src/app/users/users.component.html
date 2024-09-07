@@ -1,0 +1,23 @@
+<div class="users-container">
+  <div class="table-header">
+    <h2>Lista de Usuários</h2>
+    <button class="btn-add" (click)="addUser()">Adicionar Novo Usuário</button>
+    <button class="btn-logout" (click)="logout()">Logout</button>
+  </div>
+  <table class="users-table">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>Email</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users">
+        <td>{{ user.id }}</td>
+        <td>{{ user.name }}</td>
+        <td>{{ user.email }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
